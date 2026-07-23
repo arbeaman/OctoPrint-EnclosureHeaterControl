@@ -64,11 +64,11 @@ class EnclosureHeaterControl(octoprint.plugin.StartupPlugin,
             onoffGPIOPin = 0,
             invertonoffGPIOPin = False,
             onGCodeCommand = '',
-            offGCodeCommand = 'M84',
+            offGCodeCommand = '',
             onSysCommand = '',
             offSysCommand = '',
             switchingPlugin = '',
-            enablePseudoOnOff = False,
+            enablePseudoOnOff = True,
             pseudoOnGCodeCommand = '',
             pseudoOffGCodeCommand = 'M84',
             postOnDelay = 0.0,
@@ -86,7 +86,7 @@ class EnclosureHeaterControl(octoprint.plugin.StartupPlugin,
             idleTimeout = 30,
             idleIgnoreCommands = 'M105',
             idleTimeoutWaitTemp = 50,
-            turnOffWhenError = False
+            turnOffWhenError = True
         )
 
 

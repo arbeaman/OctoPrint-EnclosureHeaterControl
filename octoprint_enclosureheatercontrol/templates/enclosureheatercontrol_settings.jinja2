@@ -89,7 +89,7 @@
     <div class="control-group">
         <div class="controls">
             <label class="checkbox">
-            <input type="checkbox" data-bind="checked: settings.plugins.enclosureheatercontrol.enablePseudoOnOff"> Enable switching with G-Code commands.
+            <input type="checkbox" data-bind="checked: settings.plugins.enclosureheatercontrol.enablePseudoOnOff"> Turn on/off when a G-Code command is executed.
             </label>
         </div>
     </div>
@@ -122,7 +122,7 @@
         <label class="control-label">Sensing Method</label>
         <div class="controls">
             <select data-bind="value: settings.plugins.enclosureheatercontrol.sensingMethod">
-                <option value="INTERNAL">Internal</option>
+                <option value="INTERNAL">Internal (Use the last set state)</option>
                 <option value="SYSTEM">System Command</option>
                 <option value="GPIO"{% if not plugin_enclosureheatercontrol_hasGPIO %} disabled{% endif %}>GPIO</option>
                 <option value="PLUGIN">Plugin</option>
@@ -185,7 +185,7 @@
     <div class="control-group">
         <div class="controls">
             <label class="checkbox">
-            <input type="checkbox" data-bind="checked: settings.plugins.enclosureheatercontrol.autoOn"> Automatically turn Enclosure Heater ON
+            <input type="checkbox" data-bind="checked: settings.plugins.enclosureheatercontrol.autoOn"> Automatically turn Enclosure Heater ON when a G-Code is executed
             </label>
         </div>
     </div>

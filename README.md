@@ -4,12 +4,18 @@ This OctoPrint plugin provides remote control of a printer enclosure heater.
 The enclosure heater can be automatically switched on/off when:
     user specified G-Code commands are sent to the printer;
     or through a light bulb icon on the Octo-Print nav bar.
-    It can also be switched off when the printer is idle.
+
+It can also be switched off when the printer is idle.
 
 This supports heaters that are controlled via compatible plug-ins, Commands (G-Code or System), or GPIO pins.
 
-![EnclosureHeaterControl](enclosureheatercontrol_navbar_settings.png?raw=true)
- 
+The lightbulb icon in the nav bar can be clicked to turnt he light on or off:
+![EnclosureHeaterControl](enclosureheatercontrol_navbar.png?raw=true)
+
+The following is the settings screen:
+![EnclosureHeaterControl](enclosureheatercontrol_settings1.png?raw=true)
+
+![EnclosureHeaterControl](enclosureheatercontrol_settings2.png?raw=true)
  
 ## Setup
 Install the plugin using Plugin Manager from Settings

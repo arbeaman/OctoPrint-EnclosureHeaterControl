@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "OctoPrint-EnclosureHeaterControl"
-version = "2.0.0"
+version = "2.0.1"
 description = "Control a 3D printer enclosure heater."
 authors = [
     {name = "Alerick Beaman", email = "35195829+arbeaman@users.noreply.github.com"}

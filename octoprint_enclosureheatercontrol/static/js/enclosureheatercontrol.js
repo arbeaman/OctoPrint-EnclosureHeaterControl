@@ -1,3 +1,6 @@
+// Nav bar and settings view model for Enclosure Heater Control. Reflects the current state in the nav
+// bar icon, drives the toggle button (confirming before switching off when enabled), and
+// manages the settings UI, including the sub-plugin 'Get More...' selector.
 $(function() {
     function EnclosureHeaterControlViewModel(parameters) {
         var self = this;
@@ -72,6 +75,7 @@ $(function() {
             }
         };
 
+        // Reflect state in the nav bar icon and fetch the initial state.
         self.onStartup = function() {
             self.isEnclosureHeaterOn.subscribe(function() {
                 if (self.isEnclosureHeaterOn()) {
@@ -86,6 +90,7 @@ $(function() {
             });
         };
 
+        // Update state from server-pushed plugin messages.
         self.onDataUpdaterPluginMessage = function(plugin, data) {
             if (plugin !== "enclosureheatercontrol") {
                 return;
@@ -96,6 +101,7 @@ $(function() {
             }
         };
 
+        // Toggle the output, confirming before switching off when the warning dialog is enabled.
         self.toggleEnclosureHeater = function() {
             if (self.isEnclosureHeaterOn()) {
                 if (self.settings.plugins.enclosureheatercontrol.enablePowerOffWarningDialog()) {
@@ -130,6 +136,7 @@ $(function() {
         };
     }
 
+    // Register the view model and bind it to the nav bar and settings elements.
     OCTOPRINT_VIEWMODELS.push({
         construct: EnclosureHeaterControlViewModel,
         dependencies: ["settingsViewModel", "loginStateViewModel"],

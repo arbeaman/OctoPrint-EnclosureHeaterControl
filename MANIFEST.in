@@ -1,0 +1,5 @@
+include README.md
+include LICENSE
+recursive-include octoprint_enclosureheatercontrol/templates *
+recursive-include octoprint_enclosureheatercontrol/translations *
+recursive-include octoprint_enclosureheatercontrol/static *
